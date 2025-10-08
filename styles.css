@@ -1,0 +1,24 @@
+:root{
+  --bg:#0f1724;
+  --panel:#0b1220;
+  --accent:#10b981;
+  --text:#e6eef8;
+  --muted:#94a3b8;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#071127 0%,#0f1724 100%);font-family:Inter,Arial,sans-serif;color:var(--text);display:flex;align-items:center;justify-content:center;height:100vh;padding:1rem}
+
+.calc-wrap{width:360px}
+.calc{background:linear-gradient(180deg,#0b1220,#071127);border-radius:12px;padding:18px;box-shadow:0 12px 40px rgba(2,6,23,0.7)}
+.display{height:70px;background:linear-gradient(180deg,#ffffff,#f3f4f6);color:#071127;border-radius:8px;padding:12px 18px;font-size:2rem;font-weight:700;display:flex;align-items:center;justify-content:flex-end;overflow:hidden}
+.buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.btn{background:linear-gradient(180deg,#111827,#0b1220);border-radius:8px;padding:14px 10px;color:var(--text);font-size:1.05rem;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.btn:active{transform:translateY(2px);box-shadow:0 3px 8px rgba(0,0,0,0.5)}
+.btn.op{background:linear-gradient(180deg,#065f46,#064e3b);font-weight:700}
+.btn.wide{grid-column:span 2}
+@media (max-width:420px){
+  .calc-wrap{width:320px}
+  .display{font-size:1.6rem;height:60px}
+  .btn{padding:12px 8px}
+}
